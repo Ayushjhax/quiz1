@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delhi Police Quiz</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px; /* Adjusted margin for spacing */
+      }
+
+      input[type="text"] {
+        width: calc(100% - 60px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+
+      .embedded-info {
+        margin-top: 20px;
+      }
+
+      iframe {
+        width: 100%;
+        height: 600px; /* Increased height for easier readability */
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="d-flex justify-content-center py-3 mb-4 border-bottom">
+      <div class="container">
+        <a
+          href="/"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+        >
+          <img
+            src="/Delhi_Police_Logo.png"
+            alt="Delhi Police Logo"
+            width="40"
+            height="32"
+            class="me-2"
+          />
+          <span class="fs-4">Delhi Police Quiz</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- Typeform link -->
+      <div data-tf-live="01HT7W86N5B3TDMQ0RNGY9BZCA"></div>
+      <script src="//embed.typeform.com/next/embed.js"></script>
+
+      <p>
+        Here is the Typeform link:
+        <a href="//embed.typeform.com/next/embed.js">Typeform</a>
+      </p>
+
+      <hr />
+      <!-- Separation line -->
+
+      <form id="linkForm">
+        <input type="text" id="hyperlink" placeholder="Enter hyperlink" />
+        <input type="submit" value="Embed" />
+      </form>
+      <div class="embedded-info" id="embeddedInfo"></div>
+    </div>
+
+    <script>
+      document
+        .getElementById("linkForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          var url = document.getElementById("hyperlink").value;
+          embedInfo(url);
+        });
+
+      function embedInfo(url) {
+        var embeddedInfo = document.getElementById("embeddedInfo");
+        embeddedInfo.innerHTML = "<iframe src='" + url + "'></iframe>";
+      }
+    </script>
+  </body>
+</html>
